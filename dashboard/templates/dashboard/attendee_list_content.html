@@ -1,0 +1,29 @@
+{% for attendee in attendees %}
+  <tr>
+    <td>{{ attendee.first_name }}</td>
+    <td>{{ attendee.middle_name }}</td>
+    <td>{{ attendee.last_name }}</td>
+    <td>{{ attendee.phone_number }}</td>
+    <td>{{ attendee.email }}</td>
+    <td>{{ attendee.ticket }}</td>
+    <!-- <td>{{ attendee.created_at }}</td> -->
+    <!-- <td>{{ attendee.updated_at}}</td> -->
+
+    <!-- <td>  
+      <button class="btn btn-warning show-form-update" data-url="{% url 'api_v1:get_delete_update_attendee' attendee.pk %}">
+      <span class="glyphicon glyphicon-pencil"></span>
+      Edit 
+      </button>
+    </td>
+    <td>  
+      <button class="btn btn-danger show-form-delete" data-url="{% url 'api_v1:get_delete_update_attendee' attendee.pk  %">
+      <span class="glyphicon glyphicon-trash"></span>
+      Delete 
+      </button>
+    </td> -->
+  </tr>
+{% empty %}
+  <tr>
+    <td colspan="7" class="text-center bg-warning">No Attendees</td>
+  </tr>
+{% endfor %}

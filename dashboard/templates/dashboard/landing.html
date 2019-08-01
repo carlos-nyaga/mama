@@ -1,0 +1,758 @@
+{% load static %}
+<!Doctype html>
+
+<html lang="zxx">
+
+<head>
+    <title>Mama Mata - Home</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="mama, MATA," />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta tag Keywords -->
+
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{% static 'kd/css/bootstrap.css' %}">
+    <!-- Bootstrap-Core-CSS -->
+
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="{% static 'kd/css/style.css' %}" type="text/css" media="all" />
+
+    <link href="{% static 'kd/css/blast.min.css' %}" rel="stylesheet" />
+
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="{% static 'kd/css/font-awesome.css' %}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!--lightbox -->
+    <link rel="stylesheet" href="{% static 'kd/css/lightbox.css' %}">
+    <!-- lightbox -->
+
+
+    <!-- Font-Awesome-Icons-CSS -->
+    <link href="//fonts.googleapis.com/css?family=Oswald:300,400,500,600,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+</head>
+
+<body>
+  <div class="main">
+          <div class="blast-box">
+              <div class="blast-frame">
+                  <p>Color schemes</p>
+                  <div class="blast-colors d-flex justify-content-center">
+                      <div class="blast-color">#067334</div>
+                      <div class="blast-color">#ff322e</div>
+                      <div class="blast-color">#34bf49</div>
+                      <div class="blast-color">#008080</div>
+                      <div class="blast-color">#900020</div>
+
+                      <!-- you can add more colors here -->
+                  </div>
+                  <p class="blast-custom-colors">Select Color</p>
+                  <input type="color" name="blastCustomColor" value="#067334">
+              </div>
+              <div class="blast-icon"><i class="fa fa-cog" aria-hidden="true"></i></div>
+
+          </div>
+          <div id="page">
+              <div id="home" class="banner" data-blast="bgColor">
+
+                  <!--/banner-->
+                  <nav class="navbar navbar-expand-lg mb-4 top-bar navbar-static-top sps sps--abv">
+                      <div class="container">
+                          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+        </button>
+                          <a class="navbar-brand mx-auto" href="{% url 'dashboard:home'%}">
+                            <!-- <img src="{% static 'kd/images/kenya_1.jpg' %}" alt="logo" class="img-fluid"> -->
+
+                            KDR<span data-blast="color">EMS</span>
+                              <span class="editt">Bringing Dreams to Life</span>
+                          </a>
+                          <div class="collapse navbar-collapse" id="navbarCollapse1">
+                              <ul class="navbar-nav ml-auto">
+                                  <li class="nav-item active"> <a class="nav-link" href="#myCarousel" data-blast="color">Home <span class="sr-only">(current)</span></a> </li>
+                                  <li class="nav-item"> <a class="nav-link" href="#about">About</a> </li>
+                                  <li class="nav-item"> <a class="nav-link" href="#services">Services</a> </li>
+                                  <li class="nav-item"> <a class="nav-link" href="#land">Land For Sale</a> </li>
+                                  <li class="nav-item"> <a class="nav-link" href="#contact">Contact</a> </li>
+                                  <li class="nav-item"> <a class="nav-link" href="{% url 'dashboard:index'%}">Dashboard</a> </li>
+
+                                </ul>
+                          </div>
+                      </div>
+                  </nav>
+                  <!-- Swiper Silder
+      ================================================== -->
+                  <!-- Slider main container -->
+                  <div class="swiper-container main-slider" id="myCarousel" data-blast="bgColor">
+                      <div class="swiper-wrapper">
+                          <div class="swiper-slide slider-bg-position" style="background:url({% static 'kd/images/Logo.png' %})" data-hash="slide1">
+                             
+                            
+                            <!-- <div class="ban-info" data-blast="" style="background:rgba(0, 151, 19, 0.6)">
+                                  <h5 style="color: black">KENYA DIASPORA REAL ESTATE MANAGEMENT SERVICES (KDREMS)
+                                        WISHES TO CONGRATULATE
+                                        KENYA WOMEN IN THE UNITED STATES (KWITU)
+                                        ON THE AUSPICIOUS OCCASION OF THEIR 4TH REUNION.</h5>
+                                  <p></p>
+                              </div> -->
+                          </div>
+                          <!--
+                          <div class="swiper-slide slider-bg-position" style="background:url(images/2.jpg)" data-hash="slide2">
+                              <div class="ban-info" data-blast="bgColor">
+                                  <h2>We'r Happy to Pamper</h2>
+                                  <p> Lorem ipsum dolor sit amet Neque porro quisquam est qui dolorem</p>
+                              </div>
+                          </div>
+                      </div>
+                    -->
+                      <!-- Add Pagination -->
+                      <div class="swiper-pagination"></div>
+                      <!-- Add Navigation
+                      <div class="swiper-button-prev"><i class="fa fa-chevron-left"></i></div>
+                      <div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div>
+                      -->
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+          <!-- Benefits
+          ================================================== -->
+
+          <section class="grids-bottom-w3ls bg-light py-md-5 py-3">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-12 about-in text-center">
+                          <div class="card">
+                              <div class="card-body">
+                                  <i class="fa fa-calendar" aria-hidden="true" data-blast="color"></i>
+                                  <h3 class="card-title">KENYA DIASPORA REAL ESTATE MANAGEMENT SERVICES (KDREMS)
+                                        WISHES TO CONGRATULATE
+                                        KENYA WOMEN IN THE UNITED STATES (KWITU)
+                                        ON THE AUSPICIOUS OCCASION OF THEIR 4TH REUNION.</h3>
+                                  <div class="line" data-blast="bgColor"></div>
+                                  <p class="card-text mt-3">IN CELEBRATION, ONE LUCKY WINNER WILL GET A 1/8 OF A PLOT IN OUR UPCOMING BETHEL OLTUROTO PROJECT. THE PROJECT IS 12 MILES EAST FROM THE NAIROBI-NAMANGA AND 7 MILES WEST OF KONZA CITY. PRIZE INCLUDES SUB-DIVISON FEES, TITLE, STAMP DUTY – A US $ 4,000 VALUE.
+                                  </p>
+                              </div>
+                          </div>
+
+                      </div>
+                      <!-- <div class="col-lg-3 about-in text-left">
+                          <div class="card">
+                              <div class="card-body">
+                                  <i class="fa fa-cubes" aria-hidden="true" data-blast="color"></i>
+                                  <h5 class="card-title"> Tech Gen</h5>
+                                  <div class="line" data-blast="bgColor"></div>
+                                  <p class="card-text mt-3">Lorem ipsum dolor sit amet consectetur elit,dolore magna aliqua uta.
+                                  </p>
+                              </div>
+                          </div>
+
+                      </div>
+                      <div class="col-lg-3 about-in text-left">
+                          <div class="card">
+                              <div class="card-body">
+                                  <i class="fa fa-heart-o" aria-hidden="true" data-blast="color"></i>
+                                  <h5 class="card-title"> Future Gen</h5>
+                                  <div class="line" data-blast="bgColor"></div>
+                                  <p class="card-text mt-3">Lorem ipsum dolor sit amet consectetur elit,dolore magna aliqua uta.
+                                  </p>
+                              </div>
+                          </div>
+
+                      </div>
+                      <div class="col-lg-3 about-in text-left">
+                          <div class="card">
+                              <div class="card-body">
+                                  <i class="fa fa-calendar" aria-hidden="true" data-blast="color"></i>
+                                  <h5 class="card-title">Time Gen</h5>
+                                  <div class="line" data-blast="bgColor"></div>
+                                  <p class="card-text mt-3">Lorem ipsum dolor sit amet consectetur elit,dolore magna aliqua uta.
+                                  </p>
+                              </div>
+                          </div>
+
+                      </div> -->
+                  </div>
+              </div>
+          </section>
+
+
+          <!-- About
+          ================================================== -->
+          <section class="about-sec parallax-section py-lg-5 py-4" id="about">
+              <div class="container">
+                  <div class="inner-sec-w3layouts py-md-5 py-3">
+                      <div class="row choose-main">
+                          <div class="col-lg-4">
+                              <h3><small>Who We Are</small>About<br>KDREMS….</h3>
+                          </div>
+                          <div class="col-lg-4">
+                              <p>“ KDREMS is all about innovative service…..about bridging the gap between investment dreams and tangible realities……between grand plans and visible accomplishments.</p>
+                              <p>We provide the affordable and trustworthy bridge between carefully selected service providers in the Real Estate, Banking, Insurance and Management Service sectors in East Africa.</p>
+                          
+                            </div>
+                          <div class="col-lg-4">
+                              <p>Our clients are mainly discerning diasporans who wish to build their wealth and plan for retirement while focusing on their careers and callings. For a small fee, we do the heavy lifting of identifying and managing the opportunities and threats available</p>
+                              <p>We do this by fusing hindsight and insight to get the necessary foresight into the best way to bring those dreams to life.”</p>
+                              <div class="log-in mt-md-4 mt-3">
+                                  <a class="btn text-uppercase" data-blast="bgColor" href="#">
+                                   Read More</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+
+
+          <!-- Servives
+          ================================================== -->
+          <section class="banner-bottom-wthree py-md-5 py-3" id="services">
+              <div class="container">
+                  <div class="inner-sec-w3layouts py-md-5 py-3">
+                      <h3 class="tittle text-center mb-lg-5 mb-3">
+                          <span data-blast="color">Our</span>Services</h3>
+                      <div class="row choose-main mb-lg-4">
+                          <div class="col-lg-6 galsses-grid-right">
+                              <!----
+                              <h5>
+                                  <span class="post-color">21</span> May 2018</h5>
+                               -->
+                              <h4 class="post mt-3">Facilitation of acquisition of relevant documents (ID, PIN, CDS Account, etc.)</h4>
+                              <div class="line" data-blast="bgColor"></div>
+                              <p class="mt-3"></p>
+                              <div class="log-in mt-md-4 mt-3">
+                                  <a class="btn text-uppercase" data-blast="bgColor" href="#about">
+                                   Read More</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-6 galsses-grid-right">
+                              <div class="galsses-grid-left">
+                                  <figure class="effect-lexi">
+                                      <img src="{% static 'kd/images/b.jpg' %}" alt="" class="img-fluid">
+                                      <figcaption>
+                                          <h3>DOCUMENT
+                                              <span data-blast="color">ACQUISITIONS</span>
+
+                                          </h3>
+                                          <p data-blast="color"> Service 1</p>
+                                      </figcaption>
+                                  </figure>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row choose-main my-lg-4 my-3">
+                          <div class="col-lg-6 galsses-grid-right mt-lg-4">
+                              <div class="galsses-grid-left">
+                                  <figure class="effect-lexi">
+                                      <img src="{% static 'kd/images/b.jpg' %}" alt="" class="img-fluid">
+                                      <figcaption>
+                                          <h3>PROPERTY
+                                              <span data-blast="color">VERIFICATION</span>
+
+                                          </h3>
+                                          <p data-blast="color"> Service 2</p>
+                                      </figcaption>
+                                  </figure>
+                              </div>
+                          </div>
+                          <div class="col-lg-6 galsses-grid-right mt-4">
+
+                              <h4 class="post mt-3">Verification of property titles.</h4>
+                              <div class="line" data-blast="bgColor"></div>
+                               <p class="mt-3"></p>
+                              <div class="log-in mt-md-4 mt-3">
+                                  <a class="btn text-uppercase" data-blast="bgColor" href="#about">
+                                   Read More</a>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="row choose-main mb-lg-4">
+                          <div class="col-lg-6 galsses-grid-right mt-lg-4">
+                              <!----
+                              <h5>
+                                  <span class="post-color">21</span> May 2018</h5>
+                               --->
+                              <h4 class="post mt-3">Purchase and sale of property.</h4>
+                              <div class="line" data-blast="bgColor"></div>
+                              <p class="mt-3"></p>
+                              <div class="log-in mt-md-4 mt-3">
+                                  <a class="btn text-uppercase" data-blast="bgColor" href="#about">
+                                   Read More</a>
+                              </div>
+                          </div>
+                          <div class="col-lg-6 galsses-grid-right mt-lg-4">
+                              <div class="galsses-grid-left">
+                                  <figure class="effect-lexi">
+                                      <img src="{% static 'kd/images/b.jpg' %}" alt="" class="img-fluid">
+                                      <figcaption>
+                                          <h3>Property
+                                              <span data-blast="color">Sale</span>
+
+                                          </h3>
+                                          <p data-blast="color"> Service 3</p>
+                                      </figcaption>
+                                  </figure>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row choose-main mt-lg-4 mt-3">
+                          <div class="col-lg-6 galsses-grid-right mt-lg-4">
+                              <div class="galsses-grid-left">
+                                  <figure class="effect-lexi">
+                                      <img src="{% static 'kd/images/b.jpg' %}" alt="" class="img-fluid">
+                                      <figcaption>
+                                          <h3>Property
+                                              <span data-blast="color">Insurance</span>
+
+                                          </h3>
+                                          <p data-blast="color"> Service 4</p>
+                                      </figcaption>
+                                  </figure>
+                              </div>
+                          </div>
+                          <div class="col-lg-6 galsses-grid-right mt-4 last-gd">
+
+                              <h4 class="post mt-3">Property insurance.</h4>
+                              <div class="line" data-blast="bgColor"></div>
+                             <p class="mt-3"></p>
+                              <div class="log-in mt-md-4 mt-3">
+                                  <a class="btn text-uppercase" data-blast="bgColor" href="#about">
+                                   Read More</a>
+                              </div>
+
+                          </div>
+                          
+                      </div>
+                      <div class="row choose-main mb-lg-4">
+                            <div class="col-lg-6 galsses-grid-right">
+                                <!----
+                                <h5>
+                                    <span class="post-color">21</span> May 2018</h5>
+                                 -->
+                                <h4 class="post mt-3">Construction</h4>
+                                <div class="line" data-blast="bgColor"></div>
+                                <p class="mt-3"></p>
+                                <div class="log-in mt-md-4 mt-3">
+                                    <a class="btn text-uppercase" data-blast="bgColor" href="#about">
+                                     Read More</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 galsses-grid-right">
+                                <div class="galsses-grid-left">
+                                    <figure class="effect-lexi">
+                                        <img src="{% static 'kd/images/b.jpg' %}" alt="" class="img-fluid">
+                                        <figcaption>
+                                            <h3>Property
+                                                <span data-blast="color">Construction</span>
+  
+                                            </h3>
+                                            <p data-blast="color"> Service 5</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row choose-main my-lg-4 my-3">
+                            <div class="col-lg-6 galsses-grid-right mt-lg-4">
+                                <div class="galsses-grid-left">
+                                    <figure class="effect-lexi">
+                                        <img src="{% static 'kd/images/b.jpg' %}" alt="" class="img-fluid">
+                                        <figcaption>
+                                            <h3>PROPERTY
+                                                <span data-blast="color">Management</span>
+  
+                                            </h3>
+                                            <p data-blast="color"> Service 6</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 galsses-grid-right mt-4">
+  
+                                <h4 class="post mt-3">Management of Property.</h4>
+                                <div class="line" data-blast="bgColor"></div>
+                                 <p class="mt-3"></p>
+                                <div class="log-in mt-md-4 mt-3">
+                                    <a class="btn text-uppercase" data-blast="bgColor" href="#about">
+                                     Read More</a>
+                                </div>
+  
+                            </div>
+                        </div>
+                        <div class="row choose-main mb-lg-4">
+                                <div class="col-lg-6 galsses-grid-right">
+                                    <!----
+                                    <h5>
+                                        <span class="post-color">21</span> May 2018</h5>
+                                     --->
+                                    <h4 class="post mt-3">Investment of returns from said property.</h4>
+                                    <div class="line" data-blast="bgColor"></div>
+                                    <p class="mt-3"></p>
+                                    <div class="log-in mt-md-4 mt-3">
+                                        <a class="btn text-uppercase" data-blast="bgColor" href="#about">
+                                         Read More</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 galsses-grid-right">
+                                    <div class="galsses-grid-left">
+                                        <figure class="effect-lexi">
+                                            <img src="{% static 'kd/images/b.jpg' %}" alt="" class="img-fluid">
+                                            <figcaption>
+                                                <h3>Property
+                                                    <span data-blast="color">Returns Investment</span>
+      
+                                                </h3>
+                                                <p data-blast="color"> Service 7</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row choose-main my-lg-4 my-3">
+                                <div class="col-lg-6 galsses-grid-right mt-lg-4">
+                                    <div class="galsses-grid-left">
+                                        <figure class="effect-lexi">
+                                            <img src="{% static 'kd/images/b.jpg' %}" alt="" class="img-fluid">
+                                            <figcaption>
+                                                <h3>PROPERTY
+                                                    <span data-blast="color">Back-Office Services</span>
+      
+                                                </h3>
+                                                <p data-blast="color"> Service 8</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 galsses-grid-right mt-4">
+      
+                                    <h4 class="post mt-3">Back-office services.</h4>
+                                    <div class="line" data-blast="bgColor"></div>
+                                     <p class="mt-3"></p>
+                                    <div class="log-in mt-md-4 mt-3">
+                                        <a class="btn text-uppercase" data-blast="bgColor" href="#about">
+                                         Read More</a>
+                                    </div>
+      
+                                </div>
+                            </div>
+                          <div class="row choose-main mb-lg-4">
+                                <div class="col-lg-6 galsses-grid-right">
+                                    <!----
+                                    <h5>
+                                        <span class="post-color">21</span> May 2018</h5>
+                                     --->
+                                    <h4 class="post mt-3">Compliance with KRA, IRS etc.</h4>
+                                    <div class="line" data-blast="bgColor"></div>
+                                    <p class="mt-3"></p>
+                                    <div class="log-in mt-md-4 mt-3">
+                                        <a class="btn text-uppercase" data-blast="bgColor" href="#about">
+                                         Read More</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 galsses-grid-right">
+                                    <div class="galsses-grid-left">
+                                        <figure class="effect-lexi">
+                                            <img src="{% static 'kd/images/b.jpg' %}" alt="" class="img-fluid">
+                                            <figcaption>
+                                                <h3>Property
+                                                    <span data-blast="color">Legal Compliance</span>
+      
+                                                </h3>
+                                                <p data-blast="color"> Service 9</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>  
+                  </div>
+              </div>
+          </section>
+<!-- Servives
+          ================================================== -->
+          <section class="banner-bottom-wthree py-md-5 py-3" id="land">
+                <div class="container">
+                    <div class="inner-sec-w3layouts py-md-5 py-3">
+                        <h3 class="tittle text-center mb-lg-5 mb-3">
+                            <span data-blast="color">Land</span>For Sale</h3>
+                            <p>We are selling very affordable un-developed Quarter (US $ 4,000), Half-Acre (US $ 8,000) and One Acre (US $ 16,000) lots at Olturoto; and Quarter (US $ 6,000, Half-Acre (10,000) and One Acre (US $ 20,000) lots Stony Athi areas of Kajiado County. They all fall inside the triangle formed by the Mombasa -Nairobi Highway, the Nairobi-Kajiado-Namanga Highway and the Mombasa-Nairobi Expressway interchanging at Kisaju.</p>
+                            <!-- <div class="log-in mt-md-4 mt-3">
+                                    <a class="btn text-uppercase" data-blast="bgColor" href="#about">
+                                     Read More</a>
+                                </div> -->
+                            <div class="container-fluid venue-gallery-container">
+                                    <div class="row no-gutters">
+                            
+                                      <div class="col-lg-3 col-md-4">
+                                        <div class="venue-gallery">
+                                          <a href="image/venue-gallery/1.jpg' %}" class="venobox" data-gall="venue-gallery">
+                                            <img src="{% static 'kd/images/venue-gallery/1.jpg' %}" alt="" class="img-fluid">
+                                          </a>
+                                        </div>
+                                      </div>
+                            
+                                      <div class="col-lg-3 col-md-4">
+                                        <div class="venue-gallery">
+                                          <a href="{% static 'kd/images/venue-gallery/10.jpg' %}" class="venobox" data-gall="venue-gallery">
+                                            <img src="{% static 'kd/images/venue-gallery/10.jpg' %}" alt="" class="img-fluid">
+                                          </a>
+                                        </div>
+                                      </div>
+                            
+                                      <div class="col-lg-3 col-md-4">
+                                        <div class="venue-gallery">
+                                          <a href="{% static 'kd/images/venue-gallery/3.JPG' %}" class="venobox" data-gall="venue-gallery">
+                                            <img src="{% static 'kd/images/venue-gallery/3.JPG' %}" alt="" class="img-fluid">
+                                          </a>
+                                        </div>
+                                      </div>
+                            
+                                      <div class="col-lg-3 col-md-4">
+                                        <div class="venue-gallery">
+                                          <a href="{% static 'kd/images/venue-gallery/4.jpg' %}" class="venobox" data-gall="venue-gallery">
+                                            <img src="{% static 'kd/images/venue-gallery/4.jpg' %}" alt="" class="img-fluid">
+                                          </a>
+                                        </div>
+                                      </div>
+                            
+                                      <div class="col-lg-3 col-md-4">
+                                        <div class="venue-gallery">
+                                          <a href="{% static 'kd/images/venue-gallery/5.jpg' %}" class="venobox" data-gall="venue-gallery">
+                                            <img src="{% static 'kd/images/venue-gallery/5.jpg' %}" alt="" class="img-fluid">
+                                          </a>
+                                        </div>
+                                      </div>
+                            
+                                      <div class="col-lg-3 col-md-4">
+                                        <div class="venue-gallery">
+                                          <a href="{% static 'kd/images/venue-gallery/6.jpg' %}" class="venobox" data-gall="venue-gallery">
+                                            <img src="{% static 'kd/images/venue-gallery/6.jpg' %}" alt="" class="img-fluid">
+                                          </a>
+                                        </div>
+                                      </div>
+                            
+                                      <div class="col-lg-3 col-md-4">
+                                        <div class="venue-gallery">
+                                          <a href="{% static 'kd/images/venue-gallery/7.jpg' %}" class="venobox" data-gall="venue-gallery">
+                                            <img src="{% static 'kd/images/venue-gallery/7.jpg' %}" alt="" class="img-fluid">
+                                          </a>
+                                        </div>
+                                      </div>
+                            
+                                      <div class="col-lg-3 col-md-4">
+                                        <div class="venue-gallery">
+                                          <a href="{% static 'kd/images/venue-gallery/8.jpg' %}" class="venobox" data-gall="venue-gallery">
+                                            <img src="{% static 'kd/images/venue-gallery/8.jpg' %}" alt="" class="img-fluid">
+                                          </a>
+                                        </div>
+                                      </div>
+                            
+                                    </div>
+                                  </div>
+                                  <div class="container-fluid venue-gallery-container">
+                                        <div class="row no-gutters">
+                                
+                                          <div class="col-lg-3 col-md-4">
+                                            <div class="venue-gallery">
+                                              <a href="image/venue-gallery/9.jpg' %}" class="venobox" data-gall="venue-gallery">
+                                                <img src="{% static 'kd/images/venue-gallery/9.jpg' %}" alt="" class="img-fluid">
+                                              </a>
+                                            </div>
+                                          </div>
+                                
+                                          <div class="col-lg-3 col-md-4">
+                                            <div class="venue-gallery">
+                                              <a href="{% static 'kd/images/venue-gallery/2.JPG' %}" class="venobox" data-gall="venue-gallery">
+                                                <img src="{% static 'kd/images/venue-gallery/2.JPG' %}" alt="" class="img-fluid">
+                                              </a>
+                                            </div>
+                                          </div>
+                                
+                                          <div class="col-lg-3 col-md-4">
+                                            <div class="venue-gallery">
+                                              <a href="{% static 'kd/images/venue-gallery/11.jpg' %}" class="venobox" data-gall="venue-gallery">
+                                                <img src="{% static 'kd/images/venue-gallery/11.jpg' %}" alt="" class="img-fluid">
+                                              </a>
+                                            </div>
+                                          </div>
+                                
+                                          <div class="col-lg-3 col-md-4">
+                                            <div class="venue-gallery">
+                                              <a href="{% static 'kd/images/venue-gallery/Syokimau.JPG' %}" class="venobox" data-gall="venue-gallery">
+                                                <img src="{% static 'kd/images/venue-gallery/Syokimau.JPG' %}" alt="" class="img-fluid">
+                                              </a>
+                                            </div>
+                                          </div>
+                                
+                                          <div class="col-lg-3 col-md-4">
+                                            <div class="venue-gallery">
+                                              <a href="{% static 'kd/images/venue-gallery/13.jpg' %}" class="venobox" data-gall="venue-gallery">
+                                                <img src="{% static 'kd/images/venue-gallery/13.jpg' %}" alt="" class="img-fluid">
+                                              </a>
+                                            </div>
+                                          </div>
+                                
+                                          <div class="col-lg-3 col-md-4">
+                                            <div class="venue-gallery">
+                                              <a href="{% static 'kd/images/venue-gallery/14.jpg' %}" class="venobox" data-gall="venue-gallery">
+                                                <img src="{% static 'kd/images/venue-gallery/14.jpg' %}" alt="" class="img-fluid">
+                                              </a>
+                                            </div>
+                                          </div>
+                                
+                                          <div class="col-lg-3 col-md-4">
+                                            <div class="venue-gallery">
+                                              <a href="{% static 'kd/images/venue-gallery/15.jpg' %}" class="venobox" data-gall="venue-gallery">
+                                                <img src="{% static 'kd/images/venue-gallery/15.jpg' %}" alt="" class="img-fluid">
+                                              </a>
+                                            </div>
+                                          </div>
+                                
+                                          <div class="col-lg-3 col-md-4">
+                                            <div class="venue-gallery">
+                                              <a href="{% static 'kd/images/venue-gallery/16.jpg' %}" class="venobox" data-gall="venue-gallery">
+                                                <img src="{% static 'kd/images/venue-gallery/16.jpg' %}" alt="" class="img-fluid">
+                                              </a>
+                                            </div>
+                                          </div>
+                                
+                                        </div>
+                                      </div>
+                    </div>
+                </div>
+          </section>
+
+          <footer>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <nav class="nav-footer">
+
+                      </nav>
+                      <div class="socials-a">
+                        <ul class="list-inline">
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-dribbble" aria-hidden="true"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="copyright-footer">
+                        <!-- <p>Kenya Diaspora Real Estate Management Services (KDREMS)</div>
+                                <p>13655 Bissonnet Street # 207,</p>
+                                <p> Houston, TX 77083</p>
+                                <p>Tel: 832-814-2310  Email: operations@matathia.com</p> -->
+                        <p class="copyright color-text-a">
+
+                          &copy; Copyright
+                          <span class="color-a">KDEMS</span> All Rights Reserved.
+                        </p>
+                      </div>
+                      <div class="credits">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+
+
+
+
+
+
+
+      <!--//banner-->
+      <!--//footer-->
+      <script src="{% static 'kd/js/jquery-2.2.3.min.js' %}"></script>
+      <script src="{% static 'kd/js/boost.js' %}"></script>
+      <script src="{% static 'kd/js/blast.min.js' %}"></script>
+      <!--  light box js -->
+      <script src="{% static 'kd/js/lightbox-plus-jquery.min.js' %}">
+      </script>
+      
+      <script src="{% static 'kd/lib/venobox/venobox.min.js' %}"></script>
+      <script>
+          // optional
+          $('#blogCarousel').carousel({
+              interval: 5000
+          });
+      </script>
+      <!-- //light box js-->
+
+      <!--/ start-smoth-scrolling -->
+      <script src="{% static 'kd/js/move-top.js' %}"></script>
+      <script src="{% static 'kd/js/easing.js' %}"></script>
+      <script>
+          jQuery(document).ready(function($) {
+              $(".scroll").click(function(event) {
+                  event.preventDefault();
+                  $('html,body').animate({
+                      scrollTop: $(this.hash).offset().top
+                  }, 900);
+              });
+          });
+      </script>
+      <script>
+          $(document).ready(function() {
+              /*
+              						var defaults = {
+              							  containerID: 'toTop', // fading element id
+              							containerHoverID: 'toTopHover', // fading element hover id
+              							scrollSpeed: 1200,
+              							easingType: 'linear'
+              						 };
+              						*/
+
+              $().UItoTop({
+                  easingType: 'easeOutQuart'
+              });
+
+          });
+      </script>
+      <!--// end-smoth-scrolling -->
+
+      <!-- //js -->
+
+      <script src="{% static 'kd/js/bootstrap.js' %}"></script>
+
+</body>
+
+</html>

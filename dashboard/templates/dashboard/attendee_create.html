@@ -1,0 +1,63 @@
+<!-- Registration Modal -->
+        <form method="post" data-url="{% url 'api_v1:get_post_attendees' %}" class="create-form needs-validation" >
+                {% csrf_token %}
+                    <div class="modal-header">
+                    <h5 class="modal-title" >Register Attendee</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card-body">
+                            <h4 class="card-title">Personal Info</h4>
+                            <div class="form-group row">
+                                <label for="fname" class="col-sm-3 text-right control-label col-form-label">First Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="fname" placeholder="First Name Here">
+                                    <div class="valid-feedback">
+                                            Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="mname" class="col-sm-3 text-right control-label col-form-label">Middle Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="mname" placeholder="Middle Name Here">
+                                    <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="lname" class="col-sm-3 text-right control-label col-form-label">Last Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="lname" placeholder="Last Name Here">
+                                    
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email" class="col-sm-3 text-right control-label col-form-label">Email</label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" id="email" placeholder="Email Here">
+                                    <div class="valid-feedback">
+                                            Looks good!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="phone" class="col-sm-3 text-right control-label col-form-label">Contact No</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="phone" placeholder="Contact No Here">
+                                    <div class="valid-feedback">
+                                            Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" id="this_one" class="btn btn-primary">register</button>
+               </div>
+            </form> 

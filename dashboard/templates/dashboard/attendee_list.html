@@ -1,0 +1,55 @@
+{% extends 'dashboard/base.html' %}
+
+{% block crumb %}
+Attendees
+{% endblock %}
+
+{% block body%}
+
+<div class="card mb-3">
+        <div class="card-header">
+        <i class="fas fa-table"></i>
+        <button class="btn rounded btn-primary show-form" data-url='{% include "dashboard/attendee_create.html" %}'>
+            <span class="fas fa-plus"></span>
+            New Attendee
+        </button>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Middle Name</th>
+                        <th>Last Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Ticket</th>
+                        <!-- <th>Created</th> -->
+                        <!-- <th>Updated</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    {% include "dashboard/attendee_list_content.html" %}
+
+                  </tbody>
+                </table>
+            </div>
+
+        </div>
+      </div>
+
+
+
+
+<div class="modal fade" id="modal-attendee">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+{% block javascriopt%}      
+{% endblock%}
