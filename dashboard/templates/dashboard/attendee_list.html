@@ -13,10 +13,11 @@ Attendees
             <span class="fas fa-plus"></span>
             New Attendee
         </button>
-        <button class="btn rounded btn-primary show-form float-right mr-4" data-url='{% include "dashboard/attendee_create.html" %}'>
-          <span class="fas fa-file-excel"></span>
-          Export
-      </button>
+        <a class="btn rounded btn-success float-right mr-4" style="color:white" href="{% url 'dashboard:attendees-export' %}">
+            <span class="fas fa-file-excel"></span>
+            Export
+
+        </a>
         </div>
         <div class="card-body">
           <div class="table-responsive">

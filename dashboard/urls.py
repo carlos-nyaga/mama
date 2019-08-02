@@ -21,5 +21,7 @@ urlpatterns = [
     path('attendees/update/<uuid:pk>/', views.attendee_update, name='attendee-update'),
     path('attendees/delete/<uuid:pk>/', views.attendee_delete, name='attendee-delete'),
 
+    path('attendees/export/', views.attendees_export, name='attendees-export'),
+
 ]
 

@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>MAMA Mata Admin - Dashboard</title>
+  <title>Mama Mata Admin - Dashboard</title>
 
   <!-- Custom fonts for this template-->
   <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
@@ -29,7 +29,7 @@
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.html">Raffle Ticket System</a>
+    <a class="navbar-brand mr-1" href="{% url 'dashboard:index'%}">Raffle Ticket System</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
@@ -148,9 +148,9 @@
                         <div class="card-body-icon">
                           <i class="fas fa-fw fa-comments"></i>
                         </div>
-                        <div class="mr-5">26 New Messages!</div>
+                        <div class="mr-5">{{attendees}} Registerd Attendees</div>
                       </div>
-                      <a class="card-footer text-white clearfix small z-1" href="#">
+                      <a class="card-footer text-white clearfix small z-1" href="{% url 'dashboard:attendees'%}">
                         <span class="float-left">View Details</span>
                         <span class="float-right">
                           <i class="fas fa-angle-right"></i>
@@ -158,7 +158,7 @@
                       </a>
                     </div>
                   </div>
-                  <div class="col-xl-3 col-sm-6 mb-3">
+                  <!-- <div class="col-xl-3 col-sm-6 mb-3">
                     <div class="card text-white bg-warning o-hidden h-100">
                       <div class="card-body">
                         <div class="card-body-icon">
@@ -173,8 +173,8 @@
                         </span>
                       </a>
                     </div>
-                  </div>
-                  <div class="col-xl-3 col-sm-6 mb-3">
+                  </div> -->
+                  <!-- <div class="col-xl-3 col-sm-6 mb-3">
                     <div class="card text-white bg-success o-hidden h-100">
                       <div class="card-body">
                         <div class="card-body-icon">
@@ -189,14 +189,14 @@
                         </span>
                       </a>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="col-xl-3 col-sm-6 mb-3">
                     <div class="card text-white bg-danger o-hidden h-100">
                       <div class="card-body">
                         <div class="card-body-icon">
                           <i class="fas fa-fw fa-life-ring"></i>
                         </div>
-                        <div class="mr-5">13 New Tickets!</div>
+                        <div class="mr-5">3 Raffle Tickets!</div>
                       </div>
                       <a class="card-footer text-white clearfix small z-1" href="#">
                         <span class="float-left">View Details</span>
@@ -217,7 +217,7 @@
       <footer class="sticky-footer">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright © KDREMS 2019</span>
+            <span>Copyright © MAMA MATA 2019</span>
           </div>
         </div>
       </footer>

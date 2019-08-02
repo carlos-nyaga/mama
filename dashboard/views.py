@@ -4,9 +4,9 @@ from django.contrib.auth.decorators import login_required
 from api_v1.models import Attendee
 from rest_framework.authtoken.models import Token
 from .forms import AttendeeForm
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.template.loader import render_to_string
-
+from .res import AttendeeResource
 def home(request):
     return render(request, "dashboard/landing.html", context={})
 
@@ -16,7 +16,7 @@ def index(request):
 
 @login_required
 def dashboard(request):
-    return render(request, "dashboard/index.html", context={})
+    return render(request, "dashboard/index.html", context={"attendees":Attendee.objects.all().count()})
 
 
 @login_required
@@ -77,3 +77,12 @@ def attendee_delete(request, pk):
         data['html_form'] = render_to_string('dashboard/attendee_delete.html',context,request=request)
 
     return JsonResponse(data)
+
+
+@login_required
+def attendees_export(request):
+    attendee_resource = AttendeeResource()
+    dataset = attendee_resource.export()
+    response = HttpResponse(dataset.xls, content_type='application/vnd.ms-excel')
+    response['Content-Disposition'] = 'attatchent; filename="attendees.xls"'
+    return response
