@@ -7,6 +7,7 @@ from django.utils.translation import ugettext as _
 from django.contrib.contenttypes.models import ContentType
 from django.utils import timezone
 import uuid
+import random
 UserModel = get_user_model()
 
 
@@ -37,8 +38,17 @@ class Attendee(models.Model):
         self.middle_name if self.middle_name else '',
         self.last_name)
 
-    # def get_update_url(self):
-    #     return reverse('dashboard:attendee-update', kwargs={'pk': self.pk})
+    @classmethod
+    def ticket_picker(self):
+        participants = [a.pk for a in self.objects.all()]
+        winner = ''
+        for i in range(0,5):
+            winner = random.choice(participants)
+        return winner
 
+    def get_update_url(self):
+        return reverse('dashboard:attendee-update', kwargs={'pk': self.pk})
+
+    
     def get_delete_url(self):
         return reverse('dashboard:attendee-delete', kwargs={'pk': self.pk})
