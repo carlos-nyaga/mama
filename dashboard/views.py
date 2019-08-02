@@ -27,7 +27,7 @@ def attendee_list(request):
         'authToken': Token.objects.get_or_create(user=request.user)[0]}
     return render(request, "dashboard/attendee_list.html", context)
 @login_required
-def save_all(request,form,template_name):
+def save_all(request,form,template_name, attendee=None):
     data = dict()
     if request.method == 'POST':
         if form.is_valid():
@@ -38,7 +38,8 @@ def save_all(request,form,template_name):
         else:
             data['form_is_valid'] = False
     context = {
-    'form':form
+    'form':form,
+    'attendee':attendee
     }
     data['html_form'] = render_to_string(template_name,context,request=request)
     return JsonResponse(data)
@@ -59,7 +60,7 @@ def attendee_update(request, pk):
         form = AttendeeForm(request.POST,instance=attendee)
     else:
         form = AttendeeForm(instance=attendee)
-    return save_all(request,form,'dashboard/attendee_update.html')
+    return save_all(request,form,'dashboard/attendee_update.html', attendee)
 
 
 @login_required
