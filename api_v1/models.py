@@ -36,3 +36,9 @@ class Attendee(models.Model):
         return "{} {} {}".format(self.first_name,
         self.middle_name if self.middle_name else '',
         self.last_name)
+
+    # def get_update_url(self):
+    #     return reverse('dashboard:attendee-update', kwargs={'pk': self.pk})
+
+    def get_delete_url(self):
+        return reverse('dashboard:attendee-delete', kwargs={'pk': self.pk})

@@ -17,6 +17,9 @@ urlpatterns = [
     path('accounts/login/', LV.as_view(template_name = 'dashboard/login_2.html'), name="login"),
 
     path('attendees/', views.attendee_list, name='attendees'),
+    path('attendees/create/', views.attendee_create, name='attendee-create'),
+    path('attendees/update/<uuid:pk>/', views.attendee_update, name='attendee-update'),
+    path('attendees/delete/<uuid:pk>/', views.attendee_delete, name='attendee-delete'),
 
 ]
 

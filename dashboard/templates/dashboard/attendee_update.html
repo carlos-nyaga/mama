@@ -1,9 +1,9 @@
 {% load crispy_forms_tags %}
-<!-- Registration Modal -->
-        <form method="post" data-url="{% url 'dashboard:attendee-create' %}" class="create-form needs-validation" >
+<!-- Update Modal -->
+        <form method="post" data-url="{% url 'dashboard:attendee-update' attendee.pk %}" class="create-form needs-validation" >
                 {% csrf_token %}
                     <div class="modal-header">
-                    <h5 class="modal-title" >Register Attendee</h5>
+                    <h5 class="modal-title" >Update Attendee</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>

@@ -1,0 +1,14 @@
+.env
+venv/
+.pytest_cache
+.vscode
+.DS_Store
+__pycache__/
+*.log
+*.log.*
+.idea/*
+*.db
+kdrems/api_v1/migrations/0*
+kdrems/dashboard/migrations/0*
+*.pyc
+*.cpython-36

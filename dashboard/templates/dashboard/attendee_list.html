@@ -9,22 +9,33 @@ Attendees
 <div class="card mb-3">
         <div class="card-header">
         <i class="fas fa-table"></i>
-        <button class="btn rounded btn-primary show-form" data-url='{% include "dashboard/attendee_create.html" %}'>
+        <button class="btn rounded btn-primary show-form" data-url="{% url 'dashboard:attendee-create'  %}">
             <span class="fas fa-plus"></span>
             New Attendee
         </button>
+        <button class="btn rounded btn-primary show-form float-right mr-4" data-url='{% include "dashboard/attendee_create.html" %}'>
+          <span class="fas fa-file-excel"></span>
+          Export
+      </button>
         </div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                     <tr>
+                        <th>
+                            <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" name="check" class="custom-control-input" id="all-checks" data-children-id="check-">
+                                    <label class="custom-control-label" for="all-checks"></label>
+                            </div>
+                        </th>
                         <th>First Name</th>
                         <th>Middle Name</th>
                         <th>Last Name</th>
                         <th>Phone</th>
                         <th>Email</th>
                         <th>Ticket</th>
+                        <th>**</th>
                         <!-- <th>Created</th> -->
                         <!-- <th>Updated</th> -->
                     </tr>
@@ -51,5 +62,34 @@ Attendees
 </div>
 
 {% endblock %}
-{% block javascriopt%}      
+{% block javascript%}   
+<script>
+   $('#dataTable').DataTable( {
+                {#pagingType: "full_numbers",#}
+                // pageLength: {{ pageLength }},
+                paging:   true,
+                fixedHeader: true,
+                select: true,
+                fixedColumns:   {
+                    leftColumns: 2
+                },
+                "columnDefs": [
+                    { "orderable": false, "targets": [0, 6] }
+                ],
+                {#dom: 'Bfrtip',#}
+                buttons: [
+                    {
+                        text: 'Export <b class="fal fa-caret-down"></b>',
+                        "className": 'btn btn-primary',
+                        action: function ( e, dt, node, config ) {
+                            alert( 'Button activated' );
+                        }
+                    }
+                ]
+            });
+            $('#dataTable tr th:first-child').removeClass("sorting_asc").removeClass("sorting");
+            $('#dataTable tr th:last-child').removeClass("sorting_asc").removeClass("sorting");
+            // $('#dataTable-table_length').append(`<label>${html}</label>`);
+
+</script>   
 {% endblock%}
