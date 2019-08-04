@@ -1,0 +1,28 @@
+
+{% load static %}
+
+<div class="modal-header">
+        <h5 class="modal-title" >And the Mama Mata Winning Raffle Ticket is:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body">
+            <table class="table " id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                          <tr>
+                              <th>Name</th>
+                              <th>Ticket</th>
+                          </tr>
+                    </thead>
+                    <tbody>
+                        <td> {{winner.full_name}} </td>
+                        <td> {{winner.ticket}} </td>
+
+                    </tbody>
+                    </table>
+  
+    </div>
+    <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>

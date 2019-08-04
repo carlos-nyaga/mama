@@ -16,16 +16,24 @@ def index(request):
 
 @login_required
 def dashboard(request):
-    return render(request, "dashboard/index.html", context={"attendees":Attendee.objects.all().count()})
-
+    return render(request, "dashboard/index.html", context={"attendees":Attendee.objects.all().count(), "count":(Attendee.objects.filter(is_winner=False).count()-4)*-1})
 
 @login_required
-def attendee_list(request):
+def attendee_winner(request):
+    return attendee_list(request, winner=True)
+
+@login_required
+def attendee_list(request, winner=None):
     attendees = Attendee.objects.all()
+    if winner != None:
+        attendees = attendees.filter(is_winner=winner)
+
     context = {
         'attendees': attendees,
         'authToken': Token.objects.get_or_create(user=request.user)[0]}
     return render(request, "dashboard/attendee_list.html", context)
+
+
 @login_required
 def save_all(request,form,template_name, attendee=None):
     data = dict()
@@ -87,3 +95,19 @@ def attendees_export(request):
     response = HttpResponse(dataset.xls, content_type='application/vnd.ms-excel')
     response['Content-Disposition'] = 'attatchent; filename="attendees.xls"'
     return response
+
+@login_required
+def winning_ticket(request):
+    data = dict()
+    winner = Attendee.objects.get(pk=Attendee.ticket_picker())
+    winner.is_winner=True
+    winner.save()
+    context = {'winner':winner}
+    data['html_form'] = render_to_string('dashboard/winner.html',context,request=request)
+    return JsonResponse(data)
+
+@login_required
+def your_word(request):
+    data = dict()
+    data['html_form'] = render_to_string('dashboard/validate.html',context,request=request)
+    return JsonResponse(data)

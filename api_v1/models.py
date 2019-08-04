@@ -24,7 +24,7 @@ class Attendee(models.Model):
     ticket = models.UUIDField("ticket", primary_key=True, default=uuid.uuid4, editable=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
+    is_winner = models.BooleanField(blank=True, null=True, default=False)
     class Meta:
         ordering = ('first_name', 'last_name')
     
@@ -40,9 +40,9 @@ class Attendee(models.Model):
 
     @classmethod
     def ticket_picker(self):
-        participants = [a.pk for a in self.objects.all()]
+        participants = [a.pk for a in self.objects.filter(is_winner=False)]
         winner = ''
-        for i in range(0,5):
+        for i in range(0,100):
             winner = random.choice(participants)
         return winner
 

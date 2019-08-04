@@ -32,6 +32,22 @@ $(document).ready(function(){
 		})
 		return false;
 	}
+	var Winner = function(){
+		console.log("Huuuraaayyy")
+		var btn = $(this);
+		$.ajax({
+			url: btn.attr("data-url"),
+			type: 'get',
+			dataType:'json',
+			beforeSend: function(){
+				$('#modal-winner').modal('show');
+			},
+			success: function(data){
+				$('#modal-winner .modal-content').html(data.html_form);
+				
+			}
+		});
+	};
 
 // create 
 $(".show-form").click(ShowForm);
@@ -44,8 +60,8 @@ $('#modal-attendee').on("submit",".update-form",SaveForm)
 //delete
 $('#dataTable').on("click",".show-form-delete",ShowForm);
 $('#modal-attendee').on("submit",".delete-form",SaveForm)
+$(".reveal-ticket").click(Winner);
 });
-
 
 
 // $(document).ready(function(){

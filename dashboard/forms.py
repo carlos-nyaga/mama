@@ -11,7 +11,7 @@ class AttendeeForm(forms.ModelForm):
     class Meta:
         model = Attendee
         fields = "__all__"
-        exclude = ('created_at', 'updated_at', 'ticket')
+        exclude = ('created_at', 'updated_at', 'ticket', 'is_winner')
 
 
     def clean(self):

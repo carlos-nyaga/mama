@@ -17,11 +17,14 @@ urlpatterns = [
     path('accounts/login/', LV.as_view(template_name = 'dashboard/login_2.html'), name="login"),
 
     path('attendees/', views.attendee_list, name='attendees'),
+    path('attendees/winner/', views.attendee_winner, name='winners'),
     path('attendees/create/', views.attendee_create, name='attendee-create'),
     path('attendees/update/<uuid:pk>/', views.attendee_update, name='attendee-update'),
     path('attendees/delete/<uuid:pk>/', views.attendee_delete, name='attendee-delete'),
 
     path('attendees/export/', views.attendees_export, name='attendees-export'),
+    path('attendees/winner/ticket', views.winning_ticket, name='winner'),
+    path('attendees/winner/validate', views.your_word, name='validate'),
 
 ]
 
