@@ -16,7 +16,7 @@ def index(request):
 
 @login_required
 def dashboard(request):
-    return render(request, "dashboard/index.html", context={"attendees":Attendee.objects.all().count(), "count":(Attendee.objects.filter(is_winner=False).count()-4)*-1})
+    return render(request, "dashboard/index.html", context={"attendees":Attendee.objects.all().count(), "count":Attendee.objects.filter(is_winner=True).count()})
 
 @login_required
 def attendee_winner(request):

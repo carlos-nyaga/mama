@@ -196,7 +196,7 @@
                         <div class="card-body-icon">
                           <i class="fas fa-fw fa-life-ring"></i>
                         </div>
-                        <div class="mr-5"> {{count}} Winning Raffle Tickets!</div>
+                        <div class="mr-5"> 4 Winning Raffle Tickets!</div>
                       </div>
                       <a class="card-footer text-white clearfix small z-1" data-toggle="modal" data-target="#modal-validate" id="winning-ticket"  href="#">
                         <span class="float-left">Generate Winners</span>
@@ -299,7 +299,7 @@
   <script>
       var Tk = "{{authToken}}"
       var attendees_url = "{% url 'dashboard:attendees' %}"
-      {% if count >= 10 %}
+      {% if count >= 4 %}
 				$('.ticket').hide();
 			{% endif %}
   </script>
