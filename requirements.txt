@@ -8,7 +8,7 @@ diff-match-patch==20181111
 Django==2.2.3
 django-crispy-forms==1.7.2
 django-import-export==1.2.0
-djangorestframework==3.10.1
+djangorestframework==3.11.2
 docopt==0.6.2
 et-xmlfile==1.0.1
 idna==2.8
